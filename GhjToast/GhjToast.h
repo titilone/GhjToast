@@ -14,5 +14,5 @@ FOUNDATION_EXPORT double GhjToastVersionNumber;
 FOUNDATION_EXPORT const unsigned char GhjToastVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GhjToast/PublicHeader.h>
-
+#import <GhjToast.swift>
 

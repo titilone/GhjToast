@@ -53,7 +53,7 @@ extension UIColor {
     }
 }
 
-class GhjToast: UIView {
+open class GhjToast: UIView {
     
     convenience init(message:String){
         self.init()
@@ -78,7 +78,7 @@ class GhjToast: UIView {
         lbContent.frame = CGRect(x: 15, y: 15, width: textSize.width, height: textSize.height)
     }
     
-    @objc class func show(msg:String,_ delay:TimeInterval = 2) {
+    @objc open class func show(msg:String,_ delay:TimeInterval = 2) {
         if msg.count == 0{
             return
         }

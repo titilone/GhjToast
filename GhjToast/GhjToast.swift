@@ -88,9 +88,28 @@ open class GhjToast: UIView {
     }
     
     private class func showP(msg:String,_ delay:TimeInterval = 2){
+        var win:UIWindow?
+        if #available(iOS 13.0, *) {
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let window = windowScene.windows.first {
+                win = window
+            }
+        } else {
+            if let window = UIApplication.shared.delegate?.window as? UIWindow {
+                win = window
+            }
+        }
+        
+//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//               let window = windowScene.windows.first else {
+//            return
+//        }
+        
+//        guard let appDel = UIApplication.shared.delegate else { return }
+//        guard let window = appDel.window else { return }
+        guard let window = win else { return }
         let toast:GhjToast = GhjToast.init(message: msg)
         toast.alpha = 0
-        let window: UIWindow = ((UIApplication.shared.delegate?.window)!)!
         window.addSubview(toast)
         toast.center = CGPoint(x: window.frame.width/2, y: window.frame.height/2)
         toast.layer.zPosition = 1000

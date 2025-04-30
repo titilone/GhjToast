@@ -1,0 +1,22 @@
+# Mac OS X
+.DS_Store
+*.swp
+
+# Build
+build/*
+dSYM/*
+Pods/*
+Podfile.lock
+PodMainDependencies/*
+
+# XCode
+*.pbxuser
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+*.xccheckout
+*.xcworkspace
+
+# Carthage
+Carthage/Build
+Carthage/

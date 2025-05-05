@@ -6,7 +6,7 @@ target 'GhjToast' do
   # use_frameworks!
 
   # Pods for GhjToast
-  pod 'GDPerformanceView-Swift'
+  # pod 'GDPerformanceView-Swift'
 
 end
 

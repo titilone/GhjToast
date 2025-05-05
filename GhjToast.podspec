@@ -14,8 +14,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/titilone/GhjToast.git', :tag => s.version }
   s.source_files = 'GhjToast/**/*'
   #s.platform = :ios, '12.0'
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '15.0'
   s.swift_versions = ['5.0', '5.1', '5.2']
-  #s.dependency 'MapboxMaps', '~> 11.9.0'
-  #s.dependency 'Turf', '4.0.0'
 end
